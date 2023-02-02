@@ -13,7 +13,7 @@
 .box-2 {
     margin: 30px 60px;
     margin-top: 130px;
-    background-color: teal;
+    background-color: white;
     height: 600px;
     width: 3px;
 } 
@@ -38,7 +38,7 @@
     margin: 25px;
     background-color: rgba(45, 202, 213, 0.984);
     color: white;
-    border: 3px solid rgba(2, 144, 154, 0.984);
+    border: 3px solid rgba(128, 195, 199, 0.984);
 }
 
 .heading{
@@ -68,7 +68,7 @@
     color: black;
 }
 .inner{
-    margin-top: 300px;
+    margin-top: 250px;
     margin-left: 30px;
 }
 .gif-main{
@@ -77,5 +77,7 @@
     
 }
 .gif{
-    border: 3px solid black;
+    margin-left: 60px;
+    border-radius: 15px;
+    border: 3px solid white;
 }

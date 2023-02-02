@@ -8,6 +8,9 @@ import DFS from "../images/dfs.jpeg";
 import dij from "../images/dij.jpeg";
 import greedy from "../images/greedy.jpeg";
 import astar from "../images/astar.jpeg";
+import bfs from "../images/bfsAlgo.png";
+import dfs from "../images/dfsAlgo.png";
+
 function ComparePage (){
     let navigate = useNavigate();
     const navigateToHomePage=()=>{
@@ -70,40 +73,39 @@ function ComparePage (){
                 <th className="content con-t"><img src={Tick} height={30} width={40}/></th>
                 
             </tr>
-            <tr>
-                <th className="headings">Pseudo Code</th>
-                <th className="content con-1"></th>
-                <th className="content con-2"></th>
-                <th className="content con-3"></th>
-                <th className="content con-4"></th>
-                <th className="content con-5"></th>
-                
-            </tr>
+            
             <tr>
                 <th className="headings">Application Scenario</th>
                 <th className="content con-1">Finding path to all the nodes</th>
-                <th className="content con-2">Finding path to one node </th>
+                <th className="content con-2">Finding path to one node buy exploring all the possible way </th>
                 <th className="content con-3">Finding path to all the nodes considering cost</th>
-                <th className="content con-4">Finding path to one node considering cost</th>
-                <th className="content con-5"></th>
+                <th className="content con-4">Finding path to one node considering heuristic</th>
+                <th className="content con-5">Finding path to one node considering cost and heuristic</th>
                 
             </tr>
-            
             <tr>
-                <th className="headings">Time Complexity</th>
-                
+                <th>
+                    <div className="headings-sub">
+                        <div className="pad">Time Complexity</div>
+                        
+                        <div>
+                            <div className="sub-heading">Adjacency List </div>
+                            <div className="sub-heading">Adjacency Matrix </div>
+                            
+                        </div>
+                    </div>
+                </th>
                 <th ><div className="sub-content">
                     <div className="con">O(V + E)</div>
-                    <div className="con">O(V^2) </div>
+                    <div className="con">O(V²) </div>
                     </div></th>
-
-                <th ><div className="sub-content">
+                    <th ><div className="sub-content">
                 <div className="con">O(V + E)</div>
-                    <div className="con">O(V^2) </div>
+                    <div className="con">O(V²) </div>
                     </div></th>
                 <th ><div className="sub-content">
                     <div className="con">O(ELogV) </div>
-                    <div className="con">O(V2) O(V^2) O(V2)</div>
+                    <div className="con"> O(V²)</div>
                     </div></th>
                 <th ><div className="sub-content">
                     <div className="con">O(|V| + |E|) </div>
@@ -113,14 +115,25 @@ function ComparePage (){
                     <div className="con">O(bd)</div>
                     <div className="con">O(bd)</div>
                     </div></th>
-                
+
+
             </tr>
             <tr>
-                <th className="headings">Space Complexity</th>
+                <th>
+                    <div className="headings-sub">
+                        <div className="pad">Space Complexity</div>
+                        
+                        <div>
+                            <div className="sub-heading">Adjacency List </div>
+                            <div className="sub-heading">Adjacency Matrix </div>
+                            
+                        </div>
+                    </div>
+                </th>
                 
-                <th ><div className="sub-content">
+                    <th ><div className="sub-content">
                     <div className="con">O(V)</div>
-                    <div className="con">O(V) </div>
+                    <div className="con">O(V)</div>
                     </div></th>
 
                 <th ><div className="sub-content">
@@ -129,7 +142,48 @@ function ComparePage (){
                     </div></th>
                 <th ><div className="sub-content">
                     <div className="con">O(ELogV) </div>
-                    <div className="con">O(V2) O(V^2) O(V2)</div>
+                    <div className="con">O(V2) O(V²) O(V2)</div>
+                    </div></th>
+                    <th ><div className="comb">
+                    Based on heuristic
+                    </div></th>
+                <th ><div className="comb">
+                    Based on heuristic
+                    </div></th>
+
+
+            </tr>
+
+
+
+
+
+            {/* <tr>
+                <th className="headings"> Time Complexity</th>
+            </tr>
+            
+            <tr>
+                <th className="sub-headings">
+                        <div className="sub-hd">
+                            Adjacency List
+                        </div>
+                        <div className="sub-hd">
+                            Adjacency Matrix
+                        </div>
+                    </th>
+                
+                <th ><div className="sub-content">
+                    <div className="con">O(V + E)</div>
+                    <div className="con">O(V²) </div>
+                    </div></th>
+
+                <th ><div className="sub-content">
+                <div className="con">O(V + E)</div>
+                    <div className="con">O(V²) </div>
+                    </div></th>
+                <th ><div className="sub-content">
+                    <div className="con">O(ELogV) </div>
+                    <div className="con"> O(V²)</div>
                     </div></th>
                 <th ><div className="sub-content">
                     <div className="con">O(|V| + |E|) </div>
@@ -140,7 +194,43 @@ function ComparePage (){
                     <div className="con">O(bd)</div>
                     </div></th>
                 
+            </tr> */}
+            {/* <tr>
+                <th className="headings"> Space Complexity</th>
             </tr>
+            
+            <tr>
+                <th className="sub-headings">
+                        <div className="sub-hd">
+                            Adjacency List
+                        </div>
+                        <div className="sub-hd">
+                            Adjacency Matrix
+                        </div>
+                    </th>
+                
+                <th ><div className="sub-content">
+                    <div className="con">O(V)</div>
+                    <div className="con">O(V)</div>
+                    </div></th>
+
+                <th ><div className="sub-content">
+                <div className="con">O(V)</div>
+                    <div className="con">O(V) </div>
+                    </div></th>
+                <th ><div className="sub-content">
+                    <div className="con">O(ELogV) </div>
+                    <div className="con">O(V2) O(V²) O(V2)</div>
+                    </div></th>
+                <th ><div className="comb">
+                    Based on heuristic
+                    </div></th>
+                <th ><div className="comb">
+                    Based on heuristic
+                    </div></th>
+                
+            </tr> */}
+
             
             <tr>
                 <th className="headings">Examples</th>
@@ -151,6 +241,17 @@ function ComparePage (){
                 <th className="content con-5">Search Engines, calculate the best route between two nodes.</th>
                 
             </tr>
+            {/* <tr>
+                <th className="headings">Pseudo Code</th>
+                <th className="content con-1">
+                    <img src={bfs}/>
+                </th>
+                <th className="content con-2"><img src={dfs}/></th>
+                <th className="content con-3"></th>
+                <th className="content con-4"></th>
+                <th className="content con-5"></th>
+                
+            </tr> */}
             
 
         </table>
@@ -158,7 +259,7 @@ function ComparePage (){
        </div>
       <center>
       <button className="home" onClick={ navigateToHomePage }> Home Page</button>
-
+      <br/>
       </center>
        
     </div>

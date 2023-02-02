@@ -7,6 +7,7 @@ import Feedback from './components/FeedBack/feedback';
 import Thankyou from './components/ThankYou/thankyou';
 import ComparePage from './components/ComparePage/comparePage';
 import HomePage from './components/Home/home';
+import Instructions from './components/Instructions/Instructions';
 function App() {
   
   return  <div className='app'>
@@ -15,12 +16,8 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>} />
         <Route path='/home' element={<HomePage/>} />
-        <Route path='/bfsalgo' element={<HomePage/>} />
-        <Route path='/dfsalgo' element={<HomePage/>} />
-        <Route path='/astaralgo' element={<HomePage/>} />
-        <Route path='/dijkstraalgo' element={<HomePage/>} />
-        <Route path='/greedybfsalgo' element={<HomePage/>} />
         <Route path='/comparepage' element={<ComparePage/>} />
+        <Route path='/help' element={<Instructions/>} />
         <Route path='/feedback' element={<Feedback/>} />
         <Route path='/thankyou' element={<Thankyou/>} />
       </Routes>

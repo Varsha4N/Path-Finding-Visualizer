@@ -1,11 +1,13 @@
 import emailjs from '@emailjs/browser';
 import React , {useRef}from "react";
 import { useNavigate } from 'react-router-dom';
-import './feedback.css'
+import './feedback.css';
+import {useState} from 'react';
 
 function Feedback (){
     const form = useRef();
     let navigate= useNavigate();
+    const [error,setError] = useState("");
 
     const sendEmail = (e) => {
       e.preventDefault();
@@ -16,7 +18,17 @@ function Feedback (){
         }, (error) => {
             console.log(error.text);
         });
-        navigate('/thankyou')
+        navigate('/thankyou');
+        //console.log(e.subject)
+        // if(e.subject){
+        //     setError("Invalid Submit");
+        // }
+        // else{
+            
+        //     console.log("Invalid Submit");
+        //     navigate('/thankyou');
+            
+        // }
     };
     return (
           <div className='outer'>
@@ -31,8 +43,8 @@ function Feedback (){
           <input type="text" name="subject" /><br/><br/><br/>
           <label>Message</label><br/>
           <textarea name="message" /><br/><br/><br/>
-          
-          <center>          <input type="submit" value="Send" className="button"/></center>
+          {(error !== "") ? <div className="error">{error}</div> : ""}
+          <center>  <input type="submit" value="Send" className="button"/></center>
 
         </form>
 

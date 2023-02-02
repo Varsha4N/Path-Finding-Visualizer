@@ -11,6 +11,9 @@ function HomePage(){
     const navigateToFeedback=()=>{
         navigate('/feedback');
     }
+    const navigateToInstructions=()=>{
+        navigate('/help');
+    }
     return <div className="outer-box">
         <div className="box-4">
             <div className="gif-main">
@@ -20,17 +23,31 @@ function HomePage(){
         </div>
         <div className="box-1">
             <div className="buttons" align="right">
-               <a href="http://127.0.0.1:5501/index.html"><button >Breadth-First Search</button></a>
+               {/* <a href="https://theoblivisci.github.io/?algo=1"><button >Breadth-First Search</button></a>
                 <br/>
-                <button >Depth-First Search</button><br/>
-                <button >Dijkstra's Shortest Path </button><br/>
-                <button >Greedy Best First Search</button><br/>
-                <button >A* Best First Search</button><br/>
+                
+                <a href="https://theoblivisci.github.io/?algo=2"><button >Depth-First Search</button><br/></a>
+                <a href="https://theoblivisci.github.io/?algo=3"><button > Dijkstra's Shortest Path</button><br/></a>
+                <a href="https://theoblivisci.github.io/?algo=4"><button >Greedy Best First Search</button><br/></a>
+                <a href="https://theoblivisci.github.io/?algo=5"><button >A* Best First Search</button><br/></a> */}
+                <a href="http://127.0.0.1:5500/index.html?algo=1"><button >Breadth-First Search</button></a>
+                <br/>
+                
+                
+                <a href="http://127.0.0.1:5500/index.html?algo=2"><button >Depth-First Search</button><br/></a>
+                <a href="http://127.0.0.1:5500/index.html?algo=3"><button > Dijkstra's Shortest Path</button><br/></a>
+                <a href="http://127.0.0.1:5500/index.html?algo=4"><button >Greedy Best First Search</button><br/></a>
+                <a href="http://127.0.0.1:5500/index.html?algo=5"><button >A* Best First Search</button><br/></a>
+                
+                {/* <button > </button><br/>
+                <button ></button><br/>
+                <button ></button><br/> */}
             </div>
         </div>
         <div className="box-2"></div>
         <div className="box-3">
             <div className="inner">
+            <button onClick={navigateToInstructions}>Help</button><br/>
                 <button onClick={navigateToDescription}>Description</button><br/>
                 <button onClick={navigateToFeedback}>Feedback</button>
 
